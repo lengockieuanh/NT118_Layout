@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bai02"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="CẬP NHẬT THÔNG TIN CÁ NHÂN"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#0A23DC"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_weight="7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/label_block"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="CMND:"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Số điện thoại:"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Địa chỉ:"
+                android:gravity="center_vertical"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input_block"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/label_block"
+            android:layout_alignTop="@id/label_block"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Nhập số CMND"
+                android:singleLine="false"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Nhập SĐT"
+                android:singleLine="false"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:hint="Nhập địa chỉ"
+                android:singleLine="false"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_toRightOf="@id/input_block"
+            android:layout_alignTop="@id/label_block"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/image_block">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/avt"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/input_block"
+            android:layout_toRightOf="@id/label_block"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Làm lại"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
